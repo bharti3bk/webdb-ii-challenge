@@ -5,5 +5,5 @@ server.listen(port, () => {
 }); 
 
 server.get('/' , (req,res) => {
-    console.log("Hello from Knex...")
+   return res.status(200).json({message: "Hello"});
 })
