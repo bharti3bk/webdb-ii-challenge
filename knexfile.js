@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
+      filename: "./data/car-dealer.db3"
     }
   },
 
@@ -21,7 +21,10 @@ module.exports = {
       max: 10
     },
     migrations: {
-      tableName: 'knex_migrations'
+      tableName: "./data/migrations"
+    },
+    seeds: {
+      directory: "./data/seeds"
     }
   },
 
