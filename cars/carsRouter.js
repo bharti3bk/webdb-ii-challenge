@@ -42,5 +42,15 @@ router.post("/" ,(req , res) => {
      .catch(err => {
          res.status(500).json(err);
      })
-}) 
+})  
+
+// db('posts')
+//     .join('users', 'user.id','=','posts.user_id')
+//     .where('users.id',id)
+//     .then(posts => {
+//       res.status(200).json(posts);
+//     })
+//     .catch(error => res.send(error))
+
+ 
 module.exports = router;
