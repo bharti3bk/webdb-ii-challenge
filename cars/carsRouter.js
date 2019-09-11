@@ -11,7 +11,20 @@ router.get("/" , (req, res) => {
    .catch(err => {
        res.status(500).json(err);
    })
-}) 
+})  
+
+router.get("/:id" , (req , res) => {
+    const {id} = req.params;
+    db("cars") 
+    .where({id})
+    .first()
+    .then(car => {
+        res.status(200).json(car)
+    })
+    .catch(err => {
+        res.status(400).json(err);
+    })
+})
 
 router.post("/" ,(req , res) => { 
     console.log("working.....")
